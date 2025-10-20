@@ -1,6 +1,5 @@
 package VisitorVsDecorator.Visitor;
 
-import example1.Visitor;
 
 class Circle implements Shape {
     double radius;
