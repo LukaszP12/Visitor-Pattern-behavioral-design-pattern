@@ -1,6 +1,6 @@
 package example1;
 
-class AreaCalculator implements Visitor{
+class AreaCalculator implements Visitor {
     @Override
     public void visit(Circle circle) {
         double area = Math.PI * circle.radius * circle.radius;

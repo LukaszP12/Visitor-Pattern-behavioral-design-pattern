@@ -5,9 +5,14 @@ public class VisitorDemo {
         Circle circle = new Circle(5);
         Rectangle rectangle = new Rectangle(4, 6);
 
-        Visitor areaVisitor = new AreaCalculator();
+        System.out.println("=== Calculating Area ===");
+        Visitor areaCalc = new AreaCalculator();
+        circle.accept(areaCalc);
+        rectangle.accept(areaCalc);
 
-        circle.accept(areaVisitor);
-        rectangle.accept(areaVisitor);
+        System.out.println("\n=== Exporting to JSON ===");
+        Visitor jsonExport = new JsonExporter();
+        circle.accept(jsonExport);
+        rectangle.accept(jsonExport);
     }
 }
