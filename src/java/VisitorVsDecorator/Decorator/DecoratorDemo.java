@@ -8,6 +8,8 @@ class DecoratorDemo {
 
         CircleShape circleShape = new CircleShape();
         ColorDecorator redCircle = new ColorDecorator(circleShape, "red");
-        redCircle.draw();
+
+        BorderDecorator blackCircledShape = new BorderDecorator(redCircle, "black");
+        blackCircledShape.draw();
     }
 }
