@@ -2,7 +2,7 @@ package VisitorVsDecorator.Decorator;
 
 class DecoratorDemo {
     public static void main(String[] args) {
-        RectangleShape rectangleShape = new RectangleShape();
+        RectangleShape rectangleShape = new RectangleShape(); // base only implements the interface
         ColorDecorator blueRectangle = new ColorDecorator(rectangleShape, "blue");
         blueRectangle.draw();
 
