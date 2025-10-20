@@ -8,5 +8,10 @@ public class VisitorDemo {
         for (VisitableShape shape : shapes) {
             shape.accept(areaCalc);
         }
+
+        PerimeterVisitor perimeterVisitor = new PerimeterVisitor();
+        for (VisitableShape shape : shapes) {
+            shape.accept(perimeterVisitor);
+        }
     }
 }
